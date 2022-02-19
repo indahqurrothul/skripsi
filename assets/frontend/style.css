@@ -1,0 +1,63 @@
+.banner-content {
+	height: 100%;
+	/* border: solid; */
+	color: white;
+	display: flex;
+	justify-content: end;
+	align-items: center;
+	padding: 0 0 200px;
+	line-height: 10px;
+}
+
+.box {
+	position: absolute;
+	top: 32%;
+	left: 80%;
+	transform: translate(-50%, -50%);
+	width: 330px;
+	height: 50px;
+	padding: 80px 40px;
+	box-sizing: border-box;
+	background: rgba(168, 162, 162, 0.5);
+	border-radius: 15px;
+}
+
+.fitur {
+	margin-top: 50px;
+}
+
+.konsultasi {
+	margin-top: 60px;
+}
+
+.konsultasi h4 {
+	margin-top: 200px;
+}
+
+.quote {
+	margin-top: 70px;
+	font-weight: 200;
+	font-style: italic;
+	font-size: 32px;
+}
+
+.footer {
+	margin-top: 80px;
+}
+
+
+
+/* info panel tips */
+.info-panel {
+	margin-top: 60px;
+	background-color: rgb(13, 110, 253);
+}
+
+/* info teks tips */
+.info-teks {
+	margin-top: 30px;
+}
+
+.form-bayi {
+	margin-top: 100px;
+}
