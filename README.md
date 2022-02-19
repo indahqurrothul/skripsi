@@ -1,0 +1,2 @@
+# skripsi
+semangat indah
