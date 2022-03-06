@@ -48,10 +48,29 @@ class M_data_kuesioner extends CI_Model {
     {
         $this->db->select('*');
         $this->db->from('tbl_data_kuesioner');
-        $this->db->join('tbl_data_usia', 'tbl_data_kuesioner.id_usia = tbl_data_usia.id_usia');        
+        $this->db->join('tbl_data_usia', 'tbl_data_kuesioner.id_usia = tbl_data_usia.id_usia'); 
+        $this->db->join('tbl_data_pengetahuan', 'tbl_data_pengetahuan.id_pengetahuan = tbl_data_kuesioner.id_pengetahuan', 'left');       
         $this->db->where('tbl_data_kuesioner.id_usia', $id);
         $return = $this->db->get('');
         return $return->result();
+    }
+
+    //milik frontend -> untuk menyimpan data pertanyaan/jawaban ke database
+    public function simpandata_pertanyaan()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_data_kuesioner');
+        $this->db->join('tbl_data_usia', 'tbl_data_kuesioner.id_usia = tbl_data_usia.id_usia'); 
+        $this->db->join('tbl_data_pengetahuan', 'tbl_data_pengetahuan.id_pengetahuan = tbl_data_kuesioner.id_pengetahuan', 'left');       
+        $this->db->where('tbl_data_kuesioner.id_usia');
+        $return = $this->db->get('');
+        return $return->result();
+    }
+
+    //milik frontend -> untuk menyimpan data pertanyaan/jawaban ke database
+    public function save_data_CF($data_pertanyaan)
+    {
+        return $this->db->insert_batch('tbl_data_konsultasi', $data_pertanyaan);
     }
 
     public function get_usia(){
@@ -98,7 +117,7 @@ class M_data_kuesioner extends CI_Model {
 
     public function hapus($id_kuesioner)
 	{
-		return $this->db->delete(tbl_data_kuesioner, array("id_kuesioner" => $id_kuesioner));
+		return $this->db->delete("tbl_data_kuesioner", array("id_kuesioner" => $id_kuesioner));
 	}
 }
 ?>

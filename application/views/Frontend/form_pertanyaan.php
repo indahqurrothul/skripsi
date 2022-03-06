@@ -64,40 +64,47 @@
     <!-- Akhir Panel -->
     <!-- form Pertanyaan -->
     <div class="container">
-        <div class="row form-pertanyaan">
-            <div class="card-body">
-                <table class="table table-hover table-striped table bordered">
-                    <thead>
-                        <th class="text-left" style="width: 20px">No</th>
-                        <th class="text-left" style="width: 670px">Pertanyaan</th>
-                        <th class="text-left" style="width: 40px">Ya</th>
-                        <th class="text-left" style="width: 50px">Tidak</th>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $no = 1;
-                        $jawab = 1;
-                        foreach ($data_kuesioner as $data) : ?>
-                        <tr>
-                            <td class="text-left"><?php echo $no++ ?></td>
-                            <td class><?php echo $data->pertanyaan ?></td>
+        <form method="post" action="<?php echo base_url('Frontend/simpan_datapertanyaan') ?>">
+            <div class="row form-pertanyaan">
+                <div class="card-body">
+                    <table class="table table-hover table-striped table bordered">
+                        <thead>
+                            <th class="text-left" style="width: 20px">No</th>
+                            <th class="text-left" style="width: 670px">Pertanyaan</th>
+                            <th class="text-left" style="width: 40px">Ya</th>
+                            <th class="text-left" style="width: 50px">Tidak</th>
+                        </thead>
+                        <tbody>
                             <?php
-                            $inputjawab = $no - 1;
-                            ?>
-                            <td class><input type="radio" id="html" name="<?php echo $inputjawab?>" value="0">
-                                Ya</label></td>
-                            <td class><input type="radio" id="html" name="<?php echo $inputjawab?>" value="1">
-                                Tidak</label></td>
-                        </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                            $no = 1;
+                            $no2 = 0;
+                            $jawab = 1;
+                            foreach ($data_kuesioner as $data) : ?>
+                            <tr>
+                                <td class="text-left"><?php echo $no++ ?></td>
+                                <?php $no2++ ?>
+                                <td class><?php echo $data->pertanyaan ?></td>
+                                <?php
+                                $inputjawab = $no2 - 1;
+                                ?>
+                                <td class><input type="radio" name="Tidak[<?php echo $inputjawab?>]" value="0">
+                                    Ya</label></td>
+                                <td class><input type="radio" name="Tidak[<?php echo $inputjawab?>]" value="1">
+                                    Tidak <?php echo $inputjawab?></label></td>
+                                <td class><input type="text" name="CFpakar[]" value="<?php echo $data->CFpakar ?>">
+                                    </label></td>
+                                <td class><input type="text" name="id_kuesioner[]" value="<?php echo $data->id_kuesioner ?>">
+                                    </label></td>
+                            </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-    </div>
-    <a href=" <?php echo base_url("Frontend/hasilkonsultasi")?>">
-        <button type="button" class="btn btn-primary">Hasil
-            Konsultasi</button> </a>
+        <button type="submit" class="btn btn-primary">Hasil Konsultasi</button>
+        </form>
+    </div> 
+       
     </div>
     <!-- Akhir form Pertanyaam -->
 

@@ -6,6 +6,7 @@ class Frontend extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('M_data_user');
+		$this->load->model('M_data_kuesioner');
 		$this->load->library('form_validation');
     }
     
@@ -46,7 +47,7 @@ class Frontend extends CI_Controller {
         "data_kuesioner" => $this->M_data_kuesioner->get_data(),  
         "autocode_kuesioner" => $this->M_data_kuesioner->autocode_kuesioner(),        
     ];
-    
+   
     
     $this->load->view('Frontend/form_pertanyaan', $data);
     }
@@ -74,16 +75,48 @@ class Frontend extends CI_Controller {
 		if ($model->simpan_data()) {
             $this->session->set_flashdata('success', 'Berhasil Menambah User');
            
+            $this->session->set_userdata('id_user', $_POST["id_user"]);
+
             $this->load->model('M_data_kuesioner');
             $data=[
         
                 "data_kuesioner" => $this->M_data_kuesioner->get_data_frontend($_POST["Usia"]),  
                 "autocode_kuesioner" => $this->M_data_kuesioner->autocode_kuesioner(),        
             ];
+
             // var_dump($data);
             // die;
             $this->load->view('Frontend/form_pertanyaan', $data);
 		}
     }
+
+    //form tambah data pertanyaan (menyimpan jawaban ke database)
+    public function simpan_datapertanyaan(){
+        $model = $this->M_data_kuesioner;
+
+        $data_pertanyaan = array();
+        $index = 0;
+        $nilai_CFuser = $_POST["Tidak"];
+        $nilai_CFpakar = $_POST["CFpakar"];
+        $id_kuesioner = $_POST["id_kuesioner"];
+        
+        foreach($id_kuesioner as $data_kuesioner){
+
+            array_push($data_pertanyaan, array(
+                'id_user' => $this->session->userdata('id_user'),
+                'id_kuesioner' => $data_kuesioner,
+                'Nilai_CFpakar' => $nilai_CFpakar[$index],
+                'Nilai_CFuser' => $nilai_CFuser[$index],
+            ));
+
+            $index++;
+
+        }
+
+        $this->M_data_kuesioner->save_data_CF($data_pertanyaan);
+
+        
+    }
+
 }
 ?>
