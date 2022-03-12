@@ -77,11 +77,12 @@
                                     </a>
                                 </div>
                                 <div class="card-body">
-                                    <table class="table table-hover table-striped table-bordered">
+                                    <table id="example1" class="table table-hover table-striped table-bordered">
                                         <thead>
                                             <th class="text-center">No</th>
                                             <th class="text-center"> Usia </th>
-                                            <th class="text-center" style="width: 670px">Pertanyaan</th>
+                                            <th class="text-center" style="width: 50px">Aspek Perkembangan</th>
+                                            <th class="text-center" style="width: 650px">Pertanyaan</th>
                                             <th class="text-center"> Aksi </th>
                                         </thead>
                                         <tbody>
@@ -91,6 +92,7 @@
                                             <tr>
                                                 <td class="text-center"><?php echo $no++?></td>
                                                 <td class="text-center"><?php echo $data->usia ?></td>
+                                                <td class="text-center"><?php echo $data->aspek_perkembangan ?></td>
                                                 <td class><?php echo $data->pertanyaan ?></td>
                                                 <td class="text-center">
                                                     <a

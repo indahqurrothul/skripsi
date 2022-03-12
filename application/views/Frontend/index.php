@@ -15,7 +15,7 @@
     <title>Deteksi Dini Penyimpangan Perkembangan pada Anak</title>
     <style>
     .banner {
-        height: 80vh;
+        height: 100vh;
         background: url("<?php echo base_url() ?>assets/frontend/gambar/banner.png");
         background-size: cover;
         background-position: center;

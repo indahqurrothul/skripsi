@@ -35,6 +35,7 @@ class M_basis_pengetahuan extends CI_Model {
 			'aspek_perkembangan' => $_POST["aspek_perkembangan"],
 			'MB' => $_POST["MB"],
 			'MD' => $_POST["MD"],
+			'CFpakar' => $_POST["CFpakar"],
 		);
 		
 		return $this->db->insert('tbl_data_pengetahuan', $data);
@@ -71,14 +72,15 @@ class M_basis_pengetahuan extends CI_Model {
 			'aspek_perkembangan' => $_POST["aspek_perkembangan"],
 			'MB' => $_POST["MB"],
 			'MD' => $_POST["MD"],
+			'CFpakar' => $_POST["CFpakar"],
 		);
 
-		return $this->db->update(tbl_data_pengetahuan, $data, array('id_pengetahuan' => $_POST['id_pengetahuan']));
+		return $this->db->update("tbl_data_pengetahuan", $data, array('id_pengetahuan' => $_POST['id_pengetahuan']));
     }
 
     public function hapus($id_pengetahuan)
 	{
-		return $this->db->delete(tbl_data_pengetahuan, array("id_pengetahuan" => $id_pengetahuan));
+		return $this->db->delete("tbl_data_pengetahuan", array("id_pengetahuan" => $id_pengetahuan));
 	}
 }
     

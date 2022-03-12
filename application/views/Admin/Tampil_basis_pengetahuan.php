@@ -69,7 +69,7 @@ $this->load->view('template/head'); ?>
                     </div>
                     <?php } ?>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-8">
                             <div class="card card-primary">
                                 <div class="card-header">
                                     <h3 class="card-title">Basis Pengetahuan</h3>
@@ -89,6 +89,7 @@ $this->load->view('template/head'); ?>
                                             <th class="text-center">Aspek Perkembangan</th>
                                             <th class="text-center">MB</th>
                                             <th class="text-center">MD</th>
+                                            <th class="text-center">CF Pakar</th>
                                             <th class="text-center">Aksi</th>
                                         </thead>
                                         <tbody>
@@ -100,6 +101,7 @@ $this->load->view('template/head'); ?>
                                                 <td class="text-center"><?php echo $row->aspek_perkembangan ?></td>
                                                 <td class="text-center"><?php echo $row->MB ?></td>
                                                 <td class="text-center"><?php echo $row->MD ?></td>
+                                                <td class="text-center"><?php echo $row->CFpakar ?></td>
                                                 <td class="text-center">
                                                     <a
                                                         href="<?= base_url('Basis_pengetahuan/tampil_edit_data/' . $row->id_pengetahuan) ?>"><button

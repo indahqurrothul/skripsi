@@ -35,12 +35,17 @@ class M_data_kuesioner extends CI_Model {
 
     public function get_data()
     {
-        $this->db->select(['a.usia','a.id_usia', 'b.pertanyaan', 'b.id_kuesioner']);
-        $this->db->from('tbl_data_kuesioner b');
-        $this->db->join('tbl_data_usia a', 'a.id_usia = b.id_usia', 'left');
-        $this->db->order_by('usia', 'asc');
+        $this->db->select(['*']);
+        $this->db->from('tbl_data_kuesioner');
+        $this->db->join('tbl_data_usia', 'tbl_data_usia.id_usia = tbl_data_kuesioner.id_usia');
+        $this->db->join('tbl_data_pengetahuan', 'tbl_data_kuesioner.id_pengetahuan = tbl_data_pengetahuan.id_pengetahuan');
+        $this->db->order_by('tbl_data_kuesioner.id_kuesioner', 'asc');
         $return = $this->db->get('');
         return $return->result();
+    }
+
+    public function get_aspek_perkembangan(){
+        return $this->db->get('tbl_data_pengetahuan')->result();
     }
     
     //milik frontend
@@ -83,6 +88,7 @@ class M_data_kuesioner extends CI_Model {
         $data = array(
             'id_kuesioner' => $_POST['id_kuesioner'],
 			'id_usia' => $_POST["usia"],
+            'id_pengetahuan' => $_POST["aspek_perkembangan"],
 			'pertanyaan' => $_POST["pertanyaan"],
 		);		
 		return $this->db->insert('tbl_data_kuesioner', $data);
@@ -109,6 +115,7 @@ class M_data_kuesioner extends CI_Model {
     {
         $data = array(
 			'id_usia' => $_POST["usia"],
+            'id_pengetahuan' => $_POST["aspek_perkembangan"],
 			'pertanyaan' => $_POST["pertanyaan"],
 		);
 
@@ -119,5 +126,54 @@ class M_data_kuesioner extends CI_Model {
 	{
 		return $this->db->delete("tbl_data_kuesioner", array("id_kuesioner" => $id_kuesioner));
 	}
+
+    //data nilai CF aspek gerak kasar
+    public function get_data_gerakkasar($id_user)
+    {
+        $this->db->select(['SUM(tbl_data_konsultasi.Nilai_CFuser) AS Nilai_gerakkasar']);
+        $this->db->from('tbl_data_konsultasi');
+        $this->db->join('tbl_data_kuesioner', 'tbl_data_kuesioner.id_kuesioner = tbl_data_konsultasi.id_kuesioner');
+        $this->db->where('tbl_data_kuesioner.id_pengetahuan', 'CP01');
+        $this->db->where('tbl_data_konsultasi.id_user', $id_user);
+        $return = $this->db->get('');
+        return $return->result();
+    }
+
+    //data nilai CF aspek gerak halus
+    public function get_data_gerakhalus($id_user)
+    {
+        $this->db->select(['SUM(tbl_data_konsultasi.Nilai_CFuser) AS Nilai_gerakhalus']);
+        $this->db->from('tbl_data_konsultasi');
+        $this->db->join('tbl_data_kuesioner', 'tbl_data_kuesioner.id_kuesioner = tbl_data_konsultasi.id_kuesioner');
+        $this->db->where('tbl_data_kuesioner.id_pengetahuan', 'CP02');
+        $this->db->where('tbl_data_konsultasi.id_user', $id_user);
+        $return = $this->db->get('');
+        return $return->result();
+    }
+
+    //data nilai CF aspek bicara dan bahasa
+    public function get_data_bicara_bahasa($id_user)
+    {
+        $this->db->select(['SUM(tbl_data_konsultasi.Nilai_CFuser) AS Nilai_bicara_bahasa']);
+        $this->db->from('tbl_data_konsultasi');
+        $this->db->join('tbl_data_kuesioner', 'tbl_data_kuesioner.id_kuesioner = tbl_data_konsultasi.id_kuesioner');
+        $this->db->where('tbl_data_kuesioner.id_pengetahuan', 'CP03');
+        $this->db->where('tbl_data_konsultasi.id_user', $id_user);
+        $return = $this->db->get('');
+        return $return->result();
+    }
+
+    //data nilai CF aspek sosialisasi dan kemandirian
+    public function get_data_sosialisasi_kemandirian($id_user)
+    {
+        $this->db->select(['SUM(tbl_data_konsultasi.Nilai_CFuser) AS Nilai_sosialisasi_kemandirian']);
+        $this->db->from('tbl_data_konsultasi');
+        $this->db->join('tbl_data_kuesioner', 'tbl_data_kuesioner.id_kuesioner = tbl_data_konsultasi.id_kuesioner');
+        $this->db->where('tbl_data_kuesioner.id_pengetahuan', 'CP04');
+        $this->db->where('tbl_data_konsultasi.id_user', $id_user);
+        $return = $this->db->get('');
+        return $return->result();
+    }
+
 }
 ?>

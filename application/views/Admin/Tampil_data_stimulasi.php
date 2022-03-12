@@ -81,8 +81,8 @@
                                         <thead>
                                             <th class="text-center">No</th>
                                             <th class="text-center">Usia</th>
-                                            <th class="text-center">Aspek Perkembangan</th>
-                                            <th class="text-center">Stimulasi</th>
+                                            <th class="text-center" style="width: 50px">Aspek Perkembangan</th>
+                                            <th class="text-center" style="width: 650px">Stimulasi</th>
                                             <th class="text-center">Aksi</th>
                                         </thead>
                                         <tbody>

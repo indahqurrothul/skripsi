@@ -68,6 +68,20 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label for="aspek_perkembangan">Aspek Perkembangan</label>
+                                        <select name="aspek_perkembangan" id="" class="form-control">
+                                            <option>-- Pilih Aspek Perkembangan --</option>
+                                            <?php 
+                                        foreach ($aspek_perkembangan as $aspek) {  ?>
+                                            <?php echo "<option value=".$aspek->id_pengetahuan.">".$aspek->aspek_perkembangan."</option>";
+                                            }
+                                            ?>
+                                        </select>
+                                        <div class="col-md-12">
+                                            <?php echo form_error('aspek_perkembangan', '<span class="text-danger")>', '</span>') ?>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <label for="usia">Pertanyaan</label>
                                         <textarea class="form-control" rows="4" id="pertanyaan" name="pertanyaan"
                                             placeholder="Masukkan Pertanyaan" required

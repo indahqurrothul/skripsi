@@ -20,7 +20,7 @@ public function get_data()
         $this->db->from('tbl_data_stimulasi');
         $this->db->join('tbl_data_usia', 'tbl_data_usia.id_usia = tbl_data_stimulasi.id_usia');
         $this->db->join('tbl_data_pengetahuan', 'tbl_data_stimulasi.id_pengetahuan = tbl_data_pengetahuan.id_pengetahuan');
-        //$this->db->order_by('usia', 'asc');
+        $this->db->order_by('tbl_data_stimulasi.id_stimulasi', 'asc');
         $return = $this->db->get('');
         return $return->result();
     }
@@ -100,7 +100,7 @@ public function get_data()
 
     public function hapus($id_stimulasi)
 	{
-		return $this->db->delete(tbl_data_stimulasi, array("id_stimulasi" => $id_stimulasi));
+		return $this->db->delete("tbl_data_stimulasi", array("id_stimulasi" => $id_stimulasi));
 	}
 }
 ?>

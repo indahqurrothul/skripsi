@@ -90,6 +90,7 @@ class Frontend extends CI_Controller {
 		}
     }
 
+
     //form tambah data pertanyaan (menyimpan jawaban ke database)
     public function simpan_datapertanyaan(){
         $model = $this->M_data_kuesioner;
@@ -114,8 +115,32 @@ class Frontend extends CI_Controller {
         }
 
         $this->M_data_kuesioner->save_data_CF($data_pertanyaan);
+       
+        redirect('Frontend/nilai_perhitungan_cf');
 
         
+    }
+
+
+    //hitung CF
+    public function nilai_perhitungan_cf(){
+        
+        //$id_user = $this->session->userdata('id_user');
+        $id_user = "USR0002";
+
+        $data=[        
+            "data_gerakkasar" => $this->M_data_kuesioner->get_data_gerakkasar($id_user),  
+            "data_gerakhalus" => $this->M_data_kuesioner->get_data_gerakhalus($id_user),  
+            "data_bicara_bahasa" => $this->M_data_kuesioner->get_data_bicara_bahasa($id_user),  
+            "data_sosialisasi_kemandirian" => $this->M_data_kuesioner->get_data_sosialisasi_kemandirian($id_user),  
+        ];
+
+        // var_dump($data);
+        // die;
+
+        $this->load->view('Frontend/form_hasilperkembangan', $data);
+
+
     }
 
 }
