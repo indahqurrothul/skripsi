@@ -175,5 +175,49 @@ class M_data_kuesioner extends CI_Model {
         return $return->result();
     }
 
+    //mengambil data stimulasi gerak kasar
+    public function get_data_stimulasi_gerakkasar($id_usia)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_data_stimulasi');
+        $this->db->where('tbl_data_stimulasi.id_pengetahuan', 'CP01');
+        $this->db->where('tbl_data_stimulasi.id_usia', $id_usia);
+        $return = $this->db->get('');
+        return $return->result();
+    }
+
+    //mengambil data stimulasi gerak halus
+    public function get_data_stimulasi_gerakhalus($id_usia)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_data_stimulasi');
+        $this->db->where('tbl_data_stimulasi.id_pengetahuan', 'CP02');
+        $this->db->where('tbl_data_stimulasi.id_usia', $id_usia);
+        $return = $this->db->get('');
+        return $return->result();
+    }
+
+    //mengambil data stimulasi bicara bahasa
+    public function get_data_stimulasi_bicara_bahasa($id_usia)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_data_stimulasi');
+        $this->db->where('tbl_data_stimulasi.id_pengetahuan', 'CP03');
+        $this->db->where('tbl_data_stimulasi.id_usia', $id_usia);
+        $return = $this->db->get('');
+        return $return->result();
+    }
+
+    //mengambil data stimulasi sosialisasi dan kemandirian
+    public function get_data_stimulasi_sosialisasi_kemandirian($id_usia)
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_data_stimulasi');
+        $this->db->where('tbl_data_stimulasi.id_pengetahuan', 'CP04');
+        $this->db->where('tbl_data_stimulasi.id_usia', $id_usia);
+        $return = $this->db->get('');
+        return $return->result();
+    }
+
 }
 ?>

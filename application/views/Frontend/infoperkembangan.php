@@ -15,8 +15,8 @@
     <title>Deteksi Dini Penyimpangan Perkembangan pada Anak</title>
     <style>
     .konsultasi {
-        margin-top: 60px;
-        margin-bottom: 60px;
+        margin-top: 45px;
+        margin-bottom: 45px;
     }
 
     .konsultasi h4 {
@@ -42,7 +42,7 @@
                     <li class="nav-item"><a class="nav-link"
                             href="<?php echo base_url("Frontend/konsultasi1") ?>">Konsultasi</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url("Frontend/Login")?>">
+                        <a class="nav-link" href="<?php echo base_url("Login")?>">
                             <button type="button" class="btn rounded btn-sm btn-primary">Login</button> </a>
                     </li>
                 </ul>
@@ -51,18 +51,13 @@
     </nav>
     <!-- Akhir Navbar -->
     <!-- Panel -->
-    <div class="container-fluid">
-        <div class="row" style="background-color: #E2F1FF;">
-            <div class="container">
-
-                <h5 class="mx-5" style="padding:60px; margin-top:-150px;">Home</h5>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-
-            </div>
+    <div class="container-fluid" style=" margin-top:80px;">
+        <div class="row" style="background-color: #E2F1FF; height:90px;">
+        <div class="container">
+       <h5 style="margin-bottom: -10px; margin-left: 105px; margin-top: 15px;">Perkembangan Anak</h5>
+       <hr style="width: 16%; margin-left: 105px;">       
+       <h6 style="margin-top: -10px; margin-left: 105px; color:steelblue;">Home/Perkembangan Anak</h6>
+        </div>
         </div>
     </div>
     <!-- Akhir Panel -->

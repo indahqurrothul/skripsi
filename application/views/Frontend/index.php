@@ -47,7 +47,7 @@
                         <a class="nav-link text-dark" href=<?php echo base_url("Frontend/konsultasi1") ?>>Konsultasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url("Frontend/Login")?>">
+                        <a class="nav-link" href="<?php echo base_url("Login")?>">
                             <button type="button" class="btn rounded btn-sm btn-primary">Login</button> </a>
                     </li>
                 </ul>
@@ -69,35 +69,40 @@
             </div>
         </div>
     </div>
-    < <!-- Akhir Banner -->
+     <!-- Akhir Banner -->
 
         <!-- Fitur -->
         <section id=" fitur">
             <div class="container fitur">
                 <div class="row justify-content-center fs-6">
-                    <div class="col">
+                    <!-- <div class="col">
                         <h4>Konsultasi</h4>
                         <p>Periksa perkembangan anak secara berkala pada setiap
                             kesempatan agar dapat mendeteksi secara dini jika anak mengalami penyimpangan
                             perkembangan serta dapat segera diobati</p>
                         <a href="<?php echo base_url("Frontend/konsultasi1")?>"><button type="button"
                                 class="btn btn-outline-primary">Baca Selengkapnya</button></a>
-                    </div>
+                    </div> -->
 
-                    <div class="col">
+                    <div class="col-6">
                         <h4>Perkembangan Anak</h4>
-                        <p>Perkembangan adalah penambahan struktur dan fungsi tubuh yang lebih
-                            kompleks. misalnya perkembangan kemampuan
-                            bicara, emosional dan sosial </p>
+                        <p>Perkembangan adalah penambahan struktur dan fungsi tubuh yang 
+                            lebih kompleks. misalnya perkembangan kemampuan bicara. 
+                            Periode awal kehidupan, terutama sejak dalam kandungan sampai usia 2 tahun, merupakan fase 
+                            sangat penting dalam pertumbuhan dan perkembangan otak anak. 
+                            </p>
                         <a href="<?php echo base_url("Frontend/infoperkembangan")?>"><button type="button"
                                 class="btn btn-outline-primary">Baca Selengkapnya</button></a>
                     </div>
-                    <div class="col">
+                    <div class="col-6">
                         <h4>Tips</h4>
-                        <p>Tips agar anak tidak mengalami penyimpangan pada perkembangannya</p>
+                        <p>Tips agar anak tidak mengalami penyimpangan pada perkembangannya. 
+                        Stimulasi dini secara rutin di setiap kesempatan perlu diberikan ke anak. Sebab, penyimpangan tumbuh kembang anak, bahkan gangguan menetap, bisa terjadi karena kekurangan stimulasi</p>
+                        
                         <a href="<?php echo base_url("Frontend/tips")?>"><button type="button"
                                 class="btn btn-outline-primary">Baca Selengkapnya</button></a>
                     </div>
+                   
                 </div>
             </div>
         </section>

@@ -23,26 +23,21 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-        <div class="container">
-            <a class="navbar-brand text-primary" href="#">Sistem Pakar KPSP</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <div class="container"><a class="navbar-brand text-primary" href="#">Sistem Pakar KPSP</a><button
+                class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span
+                    class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" aria-current="page"
+                            href="<?php echo base_url("Frontend/index") ?>">Home</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href=<?php echo base_url("Frontend/infoperkembangan") ?>>Perkembangan Anak</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="<?php echo base_url("Frontend/konsultasi1") ?>">Konsultasi</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href=<?php echo base_url("Frontend/index") ?>>Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=<?php echo base_url("Frontend/infoperkembangan") ?>>Perkembangan
-                            Anak</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href=<?php echo base_url("Frontend/konsultasi1") ?>>Konsultasi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login </a>
+                        <a class="nav-link" href="<?php echo base_url("Login")?>">
+                            <button type="button" class="btn rounded btn-sm btn-primary">Login</button> </a>
                     </li>
                 </ul>
             </div>
@@ -50,18 +45,13 @@
     </nav>
     <!-- Akhir Navbar -->
     <!-- Panel -->
-    <div class="container-fluid">
-        <div class="row" style="background-color: #E2F1FF;">
-            <div class="container">
-
-                <h5 class="mx-5" style="padding:60px; margin-top:-150px;">Home</h5>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-
-            </div>
+    <div class="container-fluid" style=" margin-top:80px;">
+        <div class="row" style="background-color: #E2F1FF; height:90px;">
+        <div class="container">
+        <h5 style="margin-bottom: -10px; margin-left: 105px; margin-top: 15px;">Konsultasi</h5>
+        <hr style="width: 18%; margin-left: 105px;">       
+        <h6 style="margin-top: -10px; margin-left: 105px; color:steelblue;">Home/Tips Perkembangan Anak</h6>
+        </div>
         </div>
     </div>
     <!-- Akhir Panel -->
@@ -84,11 +74,21 @@
     <div class="container">
         <div class="row justify-content-center info-teks">
             <div class="col-lg-10">
-                <h5>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus culpa suscipit laborum ea,
-                    consectetur amet fuga placeat delectus neque, numquam molestias quas quos aliquid officia nemo saepe
-                    iure dolorem explicabo!
-                </h5>
+                <h6>
+                1. Lingkungan Memengaruhi Tumbuh Kembang Anak, Lingkungan anak memengaruhi tumbuh dan kembang anak. Lingkungan yang baik tentu membuat anak memiliki hubungan yang positif dengan orang-orang di sekitarnya. Namun, hubungan yang positif dengan orangtua dan keluarga menjadi hal utama yang perlu dilakukan untuk membantu pertumbuhan dan perkembangan anak berjalan baik.
+                </h6>
+                <p></p>
+                <h6>
+                2. Lakukan Permainan yang Menyenangkan,  Hal-hal yang menyenangkan lebih mudah diterima oleh anak sehingga berikan anak permainan yang menyenangkan yang membuat ia berkesempatan untuk bereksplorasi, memecahkan masalah, dan belajar dari kondisi yang dihadapi. Ketika anak mengalami kesulitan, jangan ragu untuk membantu dan mendukung anak. Namun, jangan lupa untuk tetap biarkan anak menemukan cara sendiri untuk mengatasi masalahnya. 
+                </h6>
+                <p></p>
+                <h6>
+                3. Luangkan Waktu Bersama Anak, Orangtua sebaiknya luangkan waktu untuk berinteraksi dengan anak. Interaksi yang baik membantu anak meningkatkan kemampuan bersosialisasi, berkomunikasi, memecahkan masalah. Dengan meluangkan waktu bersama anak, orangtua juga lebih menjadi dekat dengan anak. Dengan begitu, orangtua mudah menemukan perubahan atau adanya gejala dari gangguan kesehatan pada anak.
+                </h6>
+                <p></p>
+                <h6>
+                4. Penuhi Kebutuhan Gizi, Pemenuhan kebutuhan gizi pada anak memengaruhi tumbuh kembang anak. Tidak ada salahnya untuk memenuhi kebutuhan gizi dan nutrisi sejak anak mulai mengonsumsi makanan pendamping ASI. Tiap anak mulai diberikan MPASI sejak menginjak usia 6 bulan dengan tekstur makanan yang lembut. Sebaiknya jangan lupa berikan makanan yang menunjang kebutuhan vitamin serta nutrisi yang dibutuhkan oleh anak pada masa tumbuh kembang. 
+                </h6>
             </div>
         </div>
     </div>
