@@ -77,7 +77,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+                    <a href="<?php echo base_url('Data_user/data_user')?>" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                             Data User

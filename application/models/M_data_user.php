@@ -1,11 +1,11 @@
 <?php
 
 class M_data_user extends CI_Model {
- 
+
     //untuk menambah data
-    public function simpan_data()
-    {
-        $data = array(
+	public function simpan_data()
+	{
+		$data = array(
 			'id_user' => $_POST["id_user"],
 			'nama_bayi' => $_POST["nama_bayi"],
 			'tanggal_lahir' => $_POST["tgl_lahir"],
@@ -19,25 +19,33 @@ class M_data_user extends CI_Model {
 	}  
 	
 	 //membuat auto code 
-	 function autocode_user()
-	 {
-		 $q = $this->db->query("SELECT MAX(RIGHT(id_user,2)) AS kd_max FROM tbl_data_user");
-		 $kd = "";
-		 $i = "USR";
-		 if ($q->num_rows() > 0) {
-			 foreach ($q->result() as $k) {
-				 $tmp = ((int) $k->kd_max) + 1;
-				 $kd = sprintf("%04s", $tmp);
-			 }
-		 } else {
-			 $kd = "0001";
-		 }
-		 date_default_timezone_set('Asia/Jakarta');
-		 return $i . $kd;
-		 
-	 }
+	function autocode_user()
+	{
+		$q = $this->db->query("SELECT MAX(RIGHT(id_user,2)) AS kd_max FROM tbl_data_user");
+		$kd = "";
+		$i = "USR";
+		if ($q->num_rows() > 0) {
+			foreach ($q->result() as $k) {
+				$tmp = ((int) $k->kd_max) + 1;
+				$kd = sprintf("%04s", $tmp);
+			}
+		} else {
+			$kd = "0001";
+		}
+		date_default_timezone_set('Asia/Jakarta');
+		return $i . $kd;
+
+	}
+
+	function Get_data_user()
+	{
+		$this->db->select('*');
+		$this->db->from('tbl_data_user'); 
+		$this->db->join('tbl_data_usia', 'tbl_data_user.id_usia = tbl_data_usia.id_usia', 'left');
+		return $this->db->get()->result();
+	}
 
 
 
-   }
+}
 ?>

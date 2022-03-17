@@ -82,7 +82,7 @@
                                 <?php
                                 $inputjawab = $no2 - 1;
                                 ?>
-                                <td class><input type="radio" name="Tidak[<?php echo $inputjawab?>]" value="0">
+                                <td class><input type="radio" name="Tidak[<?php echo $inputjawab?>]" value="0" required>
                                     Ya</label></td>
                                 <td class><input type="radio" name="Tidak[<?php echo $inputjawab?>]" value="1">
                                     Tidak <?php echo $inputjawab?></label></td>
