@@ -86,9 +86,9 @@
                                     Ya</label></td>
                                 <td class><input type="radio" name="Tidak[<?php echo $inputjawab?>]" value="1">
                                     Tidak <?php echo $inputjawab?></label></td>
-                                <td class><input type="text" name="CFpakar[]" value="<?php echo $data->CFpakar ?>">
+                                <td class><input type="hidden" name="CFpakar[]" value="<?php echo $data->CFpakar ?>">
                                     </label></td>
-                                <td class><input type="text" name="id_kuesioner[]" value="<?php echo $data->id_kuesioner ?>">
+                                <td class><input type="hidden" name="id_kuesioner[]" value="<?php echo $data->id_kuesioner ?>">
                                     </label></td>
                             </tr>
                             <?php endforeach; ?>

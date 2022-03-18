@@ -85,8 +85,6 @@ class Frontend extends CI_Controller {
                 "autocode_kuesioner" => $this->M_data_kuesioner->autocode_kuesioner(),        
             ];
 
-            // var_dump($data);
-            // die;
             $this->load->view('Frontend/form_pertanyaan', $data);
 		}
     }
@@ -94,6 +92,10 @@ class Frontend extends CI_Controller {
 
     //form tambah data pertanyaan (menyimpan jawaban ke database)
     public function simpan_datapertanyaan(){
+        if (!$this->session->userdata('id_user')) {
+            redirect(base_url("Frontend/konsultasi1"));
+        }
+
         $model = $this->M_data_kuesioner;
 
         $data_pertanyaan = array();
@@ -117,38 +119,21 @@ class Frontend extends CI_Controller {
 
         $this->M_data_kuesioner->save_data_CF($data_pertanyaan);
 
-        // $this->db->select('*');
-        // $this->db->from('tbl_data_konsultasi');
-        // $this->db->where('tbl_data_konsultasi.Nilai_CFuser', '');
-        // $this->db->where('tbl_data_konsultasi.id_user', $this->session->userdata('id_user'));
-        // $cek_jumlah_data = $this->db->get()->num_rows();
-
-        // if ($cek_jumlah_data > 1) {
-        //     $where = [
-        //         "id_user" => $this->session->userdata('id_user')
-        //     ];
-
-        //     $this->db->delete("tbl_data_konsultasi", $where);
-
-        //     $this->session->set_flashdata('kurang', 'Pertanyaan Masih Ada Yang Kosong');
-        //     redirect(site_url('Frontend/simpan_datauser'));
-
-        // } else {
-        //     
-        // }  
         redirect('Frontend/nilai_perhitungan_cf');
-
         
     }
 
 
     //hitung CF
     public function nilai_perhitungan_cf(){
+
+        if (!$this->session->userdata('id_user')) {
+            redirect(base_url("Frontend/konsultasi1"));
+        }
         
         $id_user = $this->session->userdata('id_user');
         $id_usia = $this->session->userdata('id_usia');
 
-        // $id_user = "USR0002";
 
         $data=[        
             "data_gerakkasar" => $this->M_data_kuesioner->get_data_gerakkasar($id_user),  
@@ -161,11 +146,10 @@ class Frontend extends CI_Controller {
             "stimulasi_sosialisasi_kemandirian" => $this->M_data_kuesioner->get_data_stimulasi_sosialisasi_kemandirian($id_usia),  
         ];
 
-        // var_dump($data);
-        // die;
 
         $this->load->view('Frontend/form_hasilperkembangan', $data);
-
+        $this->session->unset_userdata('id_user'); // Menghapus Session id_user
+        $this->session->unset_userdata('id_usia'); // Menghapus Session id_usia
 
     }
 

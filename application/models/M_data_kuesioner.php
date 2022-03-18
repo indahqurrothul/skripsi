@@ -127,7 +127,7 @@ class M_data_kuesioner extends CI_Model {
 		return $this->db->delete("tbl_data_kuesioner", array("id_kuesioner" => $id_kuesioner));
 	}
 
-    //data nilai CF aspek gerak kasar
+    //pengelompokan sesuai aspek data nilai CF aspek gerak kasar
     public function get_data_gerakkasar($id_user)
     {
         $this->db->select(['SUM(tbl_data_konsultasi.Nilai_CFuser) AS Nilai_gerakkasar']);

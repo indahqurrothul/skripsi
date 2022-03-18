@@ -15,7 +15,7 @@
     <title>Deteksi Dini Penyimpangan Perkembangan pada Anak</title>
     <style>
     .footer {
-        margin-top: 300px;
+        margin-top: 50px;
     }
     </style>
 </head>
@@ -80,10 +80,7 @@
 
 
                     //Langkah keempat
-                    $hasil_persentase = $combine_ketiga * 100;
-
-
-                    
+                    $hasil_persentase = $combine_ketiga * 100;                    
 
                     ?>
 
@@ -153,43 +150,49 @@
                 
             ?>
     
-        <div class="row justify-content-center mt-1">
+        <div class="row justify-content-center">
             <div class="col-lg-10">
                 <h5>
                 <?php 
                               
-                
-                foreach ($stimulasi_gerakkasar as $data_stimulasi_gerakkasar) {
-                    ?>
-                    <p align="justify"><?php echo $data_stimulasi_gerakkasar->stimulasi; ?></p>
-                    <?php                    
+                if ($CFaspek_gerakkasar > 0) {
+                    foreach ($stimulasi_gerakkasar as $data_stimulasi_gerakkasar) {
+                        ?>
+                        <p align="justify"><?php echo $data_stimulasi_gerakkasar->stimulasi; ?></p>
+                        <?php                    
+                    }
                 }
                 ?>                
                 <?php
 
-                foreach ($stimulasi_gerakhalus as $data_stimulasi_gerakhalus) {
-                    ?>
-                    <p align="justify"><?php echo $data_stimulasi_gerakhalus->stimulasi; ?></p>
-                    <?php
+                if ($CFaspek_gerakhalus > 0) {
+                    foreach ($stimulasi_gerakhalus as $data_stimulasi_gerakhalus) {
+                        ?>
+                        <p align="justify"><?php echo $data_stimulasi_gerakhalus->stimulasi; ?></p>
+                        <?php
+                    }
                 }
                 ?>               
                 <?php
 
-                foreach ($stimulasi_bicara_bahasa as $data_stimulasi_bicara_bahasa) {
-                    ?>
-                    <p align="justify"><?php echo $data_stimulasi_bicara_bahasa->stimulasi; ?></p>
-                    <?php
-                    
+                if ($CFaspek_bicara_bahasa > 0) {
+                    foreach ($stimulasi_bicara_bahasa as $data_stimulasi_bicara_bahasa) {
+                        ?>
+                        <p align="justify"><?php echo $data_stimulasi_bicara_bahasa->stimulasi; ?></p>
+                        <?php
+                        
+                    }
                 }
                 ?>               
                 <?php
 
-
-                foreach ($stimulasi_sosialisasi_kemandirian as $data_stimulasi_sosialisasi_kemandirian) {
-                    ?>
-                    <p align="justify"><?php echo $data_stimulasi_sosialisasi_kemandirian->stimulasi; ?></p>
-                    <?php
-                    
+                if ($CFaspek_sosialisasi_kemandirian > 0) {
+                    foreach ($stimulasi_sosialisasi_kemandirian as $data_stimulasi_sosialisasi_kemandirian) {
+                        ?>
+                        <p align="justify"><?php echo $data_stimulasi_sosialisasi_kemandirian->stimulasi; ?></p>
+                        <?php
+                        
+                    }
                 }
                 ?>
                 </h5>

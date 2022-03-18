@@ -144,7 +144,7 @@
                                                             <th>Nama Ibu</th>
                                                             <th>Nama Ayah</th>
                                                             <th>No Telp</th>
-                                                            <th>Alamat</th>
+                                                            <th>ALamat</th>
                                                             <!-- <th>Jenis</th> -->
                                                 <!-- <th></th>
                                                     <th>Stok Tersedia</th> -->

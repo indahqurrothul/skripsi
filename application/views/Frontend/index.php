@@ -86,7 +86,7 @@
 
                     <div class="col-6">
                         <h4>Perkembangan Anak</h4>
-                        <p>Perkembangan adalah penambahan struktur dan fungsi tubuh yang 
+                        <p p align="justify">Perkembangan adalah penambahan struktur dan fungsi tubuh yang 
                             lebih kompleks. misalnya perkembangan kemampuan bicara. 
                             Periode awal kehidupan, terutama sejak dalam kandungan sampai usia 2 tahun, merupakan fase 
                             sangat penting dalam pertumbuhan dan perkembangan otak anak. 
@@ -96,7 +96,7 @@
                     </div>
                     <div class="col-6">
                         <h4>Tips</h4>
-                        <p>Tips agar anak tidak mengalami penyimpangan pada perkembangannya. 
+                        <p p align="justify">Tips agar anak tidak mengalami penyimpangan pada perkembangannya. 
                         Stimulasi dini secara rutin di setiap kesempatan perlu diberikan ke anak. Sebab, penyimpangan tumbuh kembang anak, bahkan gangguan menetap, bisa terjadi karena kekurangan stimulasi</p>
                         
                         <a href="<?php echo base_url("Frontend/tips")?>"><button type="button"
