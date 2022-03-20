@@ -95,7 +95,7 @@
                         <div class="col-lg-8">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5><b>Pencegahan / Pengombatan yang Harus Dilakukan :</b></h5>
+                                    <h5><b>Stimulasi / Pengobatan yang Harus Dilakukan :</b></h5>
 
                                     <?php 
 
