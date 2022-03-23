@@ -44,9 +44,7 @@ class M_data_kuesioner extends CI_Model {
         return $return->result();
     }
 
-    public function get_aspek_perkembangan(){
-        return $this->db->get('tbl_data_pengetahuan')->result();
-    }
+    
     
     //milik frontend
     public function get_data_frontend($id)
@@ -93,6 +91,21 @@ class M_data_kuesioner extends CI_Model {
 		);		
 		return $this->db->insert('tbl_data_kuesioner', $data);
     }
+
+    //menampilkan data aspek berdasarkan id yg di pilih
+    public function get_aspek_perkembangan($id_kuesioner){
+        $this->db->from('tbl_data_kuesioner');
+        $this->db->join('tbl_data_pengetahuan', 'tbl_data_kuesioner.id_pengetahuan = tbl_data_pengetahuan.id_pengetahuan');
+        $this->db->where('tbl_data_kuesioner.id_kuesioner', $id_kuesioner);
+        // $query = $this->db->get_where('tbl_data_kuesioner', array('id_kuesioner' => $id_kuesioner));
+        return $this->db->get()->result();    
+    }
+        
+     //menampilkan semua list field (combo box)    
+    public function get_aspek_perkembangan2(){
+        return $this->db->get('tbl_data_pengetahuan')->result();
+    }
+    
 
     //menampilkan data berdasarkan id yg di pilih
     public function getById($id_kuesioner)

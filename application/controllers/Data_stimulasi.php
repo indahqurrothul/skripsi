@@ -61,7 +61,8 @@ class Data_Stimulasi extends CI_Controller {
 		$data = [
 			"usia" => $model->getById($id_stimulasi),
             "usia_saja" => $model->getById2(),
-            "aspek_perkembangan" => $model->get_aspek_perkembangan(),
+            "aspek_perkembangan" => $model->get_aspek_perkembangan($id_stimulasi),
+            "aspek_perkembangan_saja" => $model->get_aspek_perkembangan2(),
 		];
 		//var_dump($data);
 		//die;

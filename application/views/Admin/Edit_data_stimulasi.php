@@ -72,11 +72,13 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="aspek_perkembangan">Aspek Perkembangan</label>
+                                        <input type="hidden" value="<?= $aspek_perkembangan['0']->id_stimulasi ?>"
+                                            class="form-control" id="id_stimulasi" name="id_stimulasi" placeholder="">
                                         <select name="aspek_perkembangan" id="" class="form-control">
                                             <option value="<?php echo $aspek_perkembangan['0']->id_pengetahuan ?>">
                                                 <?php echo $aspek_perkembangan['0']->aspek_perkembangan ?></option>
                                             <?php 
-                                        foreach ($aspek_perkembangan as $aspek) {  ?>
+                                        foreach ($aspek_perkembangan_saja as $aspek) {  ?>
                                             <?php echo "<option value=".$aspek->id_pengetahuan.">".$aspek->aspek_perkembangan."</option>";
                                             }
                                             ?>

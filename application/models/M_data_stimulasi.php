@@ -29,9 +29,19 @@ public function get_data()
         return $this->db->get('tbl_data_usia')->result();
     }
 
-    public function get_aspek_perkembangan(){
-        return $this->db->get('tbl_data_pengetahuan')->result();
+   //menampilkan data aspek berdasarkan id yg di pilih
+   public function get_aspek_perkembangan($id_stimulasi){
+    $this->db->from('tbl_data_stimulasi');
+    $this->db->join('tbl_data_pengetahuan', 'tbl_data_stimulasi.id_pengetahuan = tbl_data_pengetahuan.id_pengetahuan');
+    $this->db->where('tbl_data_stimulasi.id_stimulasi', $id_stimulasi);
+    return $this->db->get()->result();    
     }
+    
+     //menampilkan semua list field (combo box)    
+    public function get_aspek_perkembangan2(){
+    return $this->db->get('tbl_data_pengetahuan')->result();
+    }
+
 
     //untuk menambah data
     public function simpan_data()

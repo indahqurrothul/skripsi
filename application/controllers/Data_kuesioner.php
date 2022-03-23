@@ -60,7 +60,9 @@ class Data_kuesioner extends CI_Controller {
 		$data = [
 			"usia" => $model->getById($id_kuesioner),
 			"usia_saja" => $model->getById2(),
-            "aspek_perkembangan" => $model->get_aspek_perkembangan(),
+            "aspek_perkembangan" => $model->get_aspek_perkembangan($id_kuesioner),
+            "aspek_perkembangan_saja" => $model->get_aspek_perkembangan2(),
+            
 		];
 		// var_dump($data);
 		// die;

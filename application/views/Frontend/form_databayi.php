@@ -59,11 +59,11 @@
     <!-- Panel -->
     <div class="container-fluid" style=" margin-top:80px;">
         <div class="row" style="background-color: #E2F1FF; height:90px;">
-        <div class="container">
-       <h5 style="margin-bottom: -10px; margin-left: 105px; margin-top: 15px;">Konsultasi</h5>
-       <hr style="width: 19%; margin-left: 105px;">       
-       <h6 style="margin-top: -10px; margin-left: 105px; color:steelblue;">Home/Konsultasi/Data Form User</h6>
-        </div>
+            <div class="container">
+                <h5 style="margin-bottom: -10px; margin-left: 105px; margin-top: 15px;">Konsultasi</h5>
+                <hr style="width: 19%; margin-left: 105px;">
+                <h6 style="margin-top: -10px; margin-left: 105px; color:steelblue;">Home/Konsultasi/Data Form User</h6>
+            </div>
         </div>
     </div>
     <!-- Akhir Panel -->
@@ -76,14 +76,17 @@
                 <div class="col-lg-6">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Nama Bayi</label>
-                        <input type="text" name="nama_bayi" class=" form-control" id=""
-                            placeholder="Masukkan Nama Bayi" />
+                        <input type="text" name="nama_bayi" class=" form-control" id="" placeholder="Masukkan Nama Bayi"
+                            required oninvalid="this.setCustomValidity('Nama Bayi Tidak Boleh Kosong')"
+                            oninput="setCustomValidity('')" />
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class=" col-lg-6">
                     <div class="mb-3">
                         <label for="exampleFormControlInput2" class="form-label">Nama Ibu</label>
-                        <input type="text" name="nama_ibu" class="form-control" id="" placeholder="Masukkan Nama Ibu" />
+                        <input type="text" name="nama_ibu" class="form-control" id="" placeholder="Masukkan Nama Ibu"
+                            required oninvalid="this.setCustomValidity('Nama Ibu Tidak Boleh Kosong')"
+                            oninput="setCustomValidity('')" />
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -96,8 +99,9 @@
                 <div class="col-lg-6">
                     <div class="mb-3">
                         <label for="exampleFormControlInput4" class="form-label">Nama Ayah</label>
-                        <input type="text" name="nama_ayah" class="form-control" id=""
-                            placeholder="Masukkan Nama Ayah" />
+                        <input type="text" name="nama_ayah" class="form-control" id="" placeholder="Masukkan Nama Ayah"
+                            required oninvalid="this.setCustomValidity('Nama Ayah Tidak Boleh Kosong')"
+                            oninput="setCustomValidity('')" />
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -114,13 +118,17 @@
                 <div class="col-lg-6">
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea6" class="form-label">No Telpon</label>
-                        <input type="text" name="no_telp" class="form-control" id="" placeholder="Masukkan No Telpon" />
+                        <input type="text" name="no_telp" class="form-control" id="" placeholder="Masukkan No Telpon"
+                            required oninvalid="this.setCustomValidity('No Telpon Tidak Boleh Kosong')"
+                            oninput="setCustomValidity('')" />
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea7" class="form-label">Alamat</label>
-                        <textarea name="alamat" class="form-control" id="" rows="3"></textarea>
+                        <textarea name="alamat" class="form-control" id="" rows="3" required
+                            oninvalid="this.setCustomValidity('Alamat Tidak Boleh Kosong')"
+                            oninput="setCustomValidity('')"></textarea>
                     </div>
                 </div>
 
