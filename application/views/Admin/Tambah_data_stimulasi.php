@@ -56,13 +56,14 @@
                                 <div class="card-body">
                                     <div class="form-group">
                                         <label for="usia">Usia</label>
-                                        <select name="usia" id="" class="form-control">
-                                            <option>-- Pilih Usia --</option>
-                                            <?php 
-                                        foreach ($usia as $usia) {  ?>
-                                            <?php echo "<option value=".$usia->id_usia.">".$usia->usia."</option>";
-                                            }
+
+                                        <select name="usia" id="usia" class="form-control" required>
+                                            <option value="">-- Pilih Usia --</option>
+                                            <?php foreach ($usia as $usia){
                                             ?>
+                                            <option value="<?php echo $usia->id_usia ?>"> <?php echo $usia->usia ?>
+                                            </option>
+                                            <?php } ?>
                                         </select>
                                         <div class="col-md-12">
                                             <?php echo form_error('usia', '<span class="text-danger")>', '</span>') ?>
@@ -70,8 +71,8 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="aspek_perkembangan">Aspek Perkembangan</label>
-                                        <select name="aspek_perkembangan" id="" class="form-control">
-                                            <option>-- Pilih Aspek Perkembangan --</option>
+                                        <select name="aspek_perkembangan" id="" class="form-control" required>
+                                            <option value="">-- Pilih Aspek Perkembangan --</option>
                                             <?php 
                                         foreach ($aspek_perkembangan as $aspek) {  ?>
                                             <?php echo "<option value=".$aspek->id_pengetahuan.">".$aspek->aspek_perkembangan."</option>";

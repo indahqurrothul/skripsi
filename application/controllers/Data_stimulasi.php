@@ -28,7 +28,7 @@ class Data_Stimulasi extends CI_Controller {
         $data=[
             "data_stimulasi" => $this->M_data_stimulasi->get_data(),        
             "usia" => $this->M_data_stimulasi->get_usia(),     
-            "aspek_perkembangan" => $this->M_data_stimulasi->get_aspek_perkembangan(),     
+            "aspek_perkembangan" => $this->M_data_stimulasi->get_aspek_perkembangan2(),     
             "autocode_stimulasi" => $this->M_data_stimulasi->autocode_stimulasi(),        
         ];
         // var_dump($data);

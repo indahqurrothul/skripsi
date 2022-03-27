@@ -64,21 +64,27 @@
                                     <div class="form-group">
                                         <label for="MB">MB</label>
                                         <input type="text" class="form-control" id="MB" name="MB"
-                                            placeholder="Masukkan Nilai MB (Measure of Belief)" required
+                                            placeholder="Masukkan Nilai MB (Measure of Belief)"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                            maxlength="10" required
                                             oninvalid="this.setCustomValidity('Nilai MB Tidak Boleh Kosong!')"
                                             oninput="setCustomValidity('')">
                                     </div>
                                     <div class="form-group">
                                         <label for="MD">MD</label>
                                         <input type="text" class="form-control" id="MD" name="MD"
-                                            placeholder="Masukkan Nilai MB (Measure of Disbelief)" required
+                                            placeholder="Masukkan Nilai MB (Measure of Disbelief)"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                            maxlength="10" required
                                             oninvalid="this.setCustomValidity('Nilai MD Tidak Boleh Kosong!')"
                                             oninput="setCustomValidity('')">
                                     </div>
                                     <div class="form-group">
                                         <label for="CFpakar">CF Pakar</label>
                                         <input type="text" class="form-control" id="CFpakar" name="CFpakar"
-                                            placeholder="Masukkan Nilai CF Pakar" required
+                                            placeholder="Masukkan Nilai CF Pakar"
+                                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                            maxlength="10" required
                                             oninvalid="this.setCustomValidity('Nilai CF Pakar Tidak Boleh Kosong!')"
                                             oninput="setCustomValidity('')">
                                     </div>

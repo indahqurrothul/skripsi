@@ -11,7 +11,8 @@
 
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="<?php echo base_url() ?>assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+            <img class="animation__shake" src="<?php echo base_url() ?>assets/dist/img/AdminLTELogo.png"
+                alt="AdminLTELogo" height="60" width="60">
         </div>
 
         <!-- Navbar -->
@@ -60,108 +61,105 @@
                                     <i class="nav-icon fas fa-user"></i>
                                 </div>
                                 <a href="#" class="small-box-footer">Baca Selengkapnya <i
-                                    class="fas fa-arrow-circle-right"></i></a>
-                                </div>
+                                        class="fas fa-arrow-circle-right"></i></a>
                             </div>
-                            <!-- ./col -->
-                            <div class="col-lg-3 col-6">
-                                <!-- small box -->
-                                <div class="small-box bg-success">
-                                    <div class="inner">
-                                        <h3><?= $usia ?></h3>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-success">
+                                <div class="inner">
+                                    <h3><?= $usia ?></h3>
 
-                                        <p>Data Usia</p>
-                                    </div>
-                                    <div class="icon">
-                                        <i class="nav-icon fas fa-child"></i>
-                                    </div>
-                                    <a href="<?php echo base_url('Data_usia')?>" class="small-box-footer">Baca Selengkapnya
-                                        <i class="fas fa-arrow-circle-right"></i></a>
+                                    <p>Data Usia</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="nav-icon fas fa-child"></i>
+                                </div>
+                                <a href="<?php echo base_url('Data_usia')?>" class="small-box-footer">Baca Selengkapnya
+                                    <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-warning">
+                                <div class="inner">
+                                    <h3><?= $kuesioner ?></h3>
+
+                                    <p>Data Kuesioner</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="nav-icon fas fa-clipboard-list"></i>
+                                </div>
+                                <a href="<?php echo base_url('Data_kuesioner')?>" class="small-box-footer">Baca
+                                    Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-danger">
+                                <div class="inner">
+                                    <h3><?= $basis_pengetahuan ?></h3>
+
+                                    <p>Basis Pengetahuan</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="nav-icon fas fa-notes-medical"></i>
+                                </div>
+                                <a href="<?php echo base_url('Basis_pengetahuan')?>" class="small-box-footer">Baca
+                                    Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- ./col -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- TABLE: DATA USER -->
+
+                            <div class="card">
+                                <div class="card-header bg-info">
+                                    <h3 class="card-title">DATA USER</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
                                     </div>
                                 </div>
-                                <!-- ./col -->
-                                <div class="col-lg-3 col-6">
-                                    <!-- small box -->
-                                    <div class="small-box bg-warning">
-                                        <div class="inner">
-                                            <h3><?= $kuesioner ?></h3>
+                                <!-- /.card-header -->
+                                <div class="card-body  bg-light ">
+                                    <table id="example1"
+                                        class="table table-bordered table-striped bg-light text-center">
 
-                                            <p>Data Kuesioner</p>
-                                        </div>
-                                        <div class="icon">
-                                            <i class="nav-icon fas fa-clipboard-list"></i>
-                                        </div>
-                                        <a href="<?php echo base_url('Data_kuesioner')?>" class="small-box-footer">Baca
-                                            Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
-                                        </div>
-                                    </div>
-                                    <!-- ./col -->
-                                    <div class="col-lg-3 col-6">
-                                        <!-- small box -->
-                                        <div class="small-box bg-danger">
-                                            <div class="inner">
-                                                <h3><?= $basis_pengetahuan ?></h3>
-
-                                                <p>Basis Pengetahuan</p>
-                                            </div>
-                                            <div class="icon">
-                                                <i class="nav-icon fas fa-notes-medical"></i>
-                                            </div>
-                                            <a href="<?php echo base_url('Basis_pengetahuan')?>" class="small-box-footer">Baca
-                                                Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
-                                            </div>
-                                        </div>
-                                        <!-- ./col -->
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <!-- TABLE: DATA USER -->
-
-                                            <div class="card">
-                                                <div class="card-header bg-info">
-                                                    <h3 class="card-title">DATA USER</h3>
-                                                    <div class="card-tools">
-                                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                                            <i class="fas fa-minus"></i>
-                                                        </button>
-                                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
-                                                            <i class="fas fa-times"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <!-- /.card-header -->
-                                                <div class="card-body  bg-light ">
-                                                    <table id="example1"
-                                                    class="table table-bordered table-striped bg-light text-center">
-
-                                                    <thead>
-                                                        <tr>
-                                                            <th>No</th>
-                                                            <th>Nama Bayi</th>
-                                                            <th>Tanggal Lahir</th>
-                                                            <th>Usia</th>
-                                                            <th>Nama Ibu</th>
-                                                            <th>Nama Ayah</th>
-                                                            <th>No Telp</th>
-                                                            <th>ALamat</th>
-                                                            <!-- <th>Jenis</th> -->
-                                                <!-- <th></th>
-                                                    <th>Stok Tersedia</th> -->
-                                                    <th>Aksi</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Nama Bayi</th>
+                                                <th>Tanggal Lahir</th>
+                                                <th>Usia</th>
+                                                <th>Nama Ibu</th>
+                                                <th>Nama Ayah</th>
+                                                <th>No Telp</th>
+                                                <th>Alamat</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
 
 
                                                 $no = 1;
                                                 foreach ($tabel as $d) {
                                                     ?>
-                                                    <tr>
-                                                        <td>
-                                                            <?php echo $no++ ?>
-                                                        </td>
+                                            <tr>
+                                                <td>
+                                                    <?php echo $no++ ?>
+                                                </td>
 
                                                 <!-- <td>
                                                     <p><?php echo $d->id_user; ?></p>
@@ -198,10 +196,10 @@
                                                     <a href="<?php echo base_url('Data_user/detail_data_user') ?>"
                                                         class="btn btn-info btn-sm active" role="button"
                                                         aria-pressed="true">Detail</a>
-                                                    </td>
+                                                </td>
 
 
-                                                </tr>
+                                            </tr>
                                             <?php } ?>
                                         </tbody>
 
@@ -218,20 +216,20 @@
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
-            </div>
-        </div> -->
+        </div>
+    </div> -->
 
     </div><!-- /.container-fluid -->
-</section>
-<!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
-<?php 
+    </section>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <?php 
 $this->load->view('template/footer'); ?>
-</div>
-<!-- ./wrapper -->
+    </div>
+    <!-- ./wrapper -->
 
-<?php
+    <?php
 $this->load->view('template/js'); 
 ?>
 

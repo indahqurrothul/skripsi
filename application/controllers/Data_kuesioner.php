@@ -28,7 +28,7 @@ class Data_kuesioner extends CI_Controller {
             
             "data_kuesioner" => $this->M_data_kuesioner->get_data(),   
             "usia" => $this->M_data_kuesioner->get_usia(),
-            "aspek_perkembangan" => $this->M_data_kuesioner->get_aspek_perkembangan(),   
+            "aspek_perkembangan" => $this->M_data_kuesioner->get_aspek_perkembangan2(),   
             "autocode_kuesioner" => $this->M_data_kuesioner->autocode_kuesioner(),        
         ];
         

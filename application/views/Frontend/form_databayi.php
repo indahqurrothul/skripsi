@@ -92,8 +92,10 @@
                 <div class="col-lg-6">
                     <div class="mb-3">
                         <label for="exampleFormControlInput3" class="form-label">Tanggal Lahir</label>
-                        <input type="text" name="tgl_lahir" class="form-control" id=""
-                            placeholder="Masukkan Tanggal Lahir" />
+                        <input type="date" name="tgl_lahir" class="form-control" id=""
+                            placeholder="Masukkan Tanggal Lahir" required
+                            oninvalid="this.setCustomValidity('Tanggal Lahir Tidak Boleh Kosong')"
+                            oninput="setCustomValidity('')" />
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -107,7 +109,8 @@
                 <div class="col-lg-6">
                     <div class="mb-3">
                         <label for="exampleFormControlInput5" class="form-label">Pilih Usia Bayi</label>
-                        <select name="Usia" id="Usia" class="form-control">
+                        <select name="Usia" id="Usia" class="form-control" required>
+                            <option value="">-- Pilih Usia --</option>
                             <?php foreach ($data_usia as $data){
                             ?>
                             <option value="<?php echo $data->id_usia ?>"> <?php echo $data->usia ?></option>
@@ -119,8 +122,8 @@
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea6" class="form-label">No Telpon</label>
                         <input type="text" name="no_telp" class="form-control" id="" placeholder="Masukkan No Telpon"
-                            required oninvalid="this.setCustomValidity('No Telpon Tidak Boleh Kosong')"
-                            oninput="setCustomValidity('')" />
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                            maxlength="14" />
                     </div>
                 </div>
                 <div class="col-lg-6">
