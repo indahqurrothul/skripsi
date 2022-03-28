@@ -60,8 +60,9 @@
                                 <div class="icon">
                                     <i class="nav-icon fas fa-user"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">Baca Selengkapnya <i
-                                        class="fas fa-arrow-circle-right"></i></a>
+                                <a href="<?php echo base_url('Data_user/data_user')?>" class="small-box-footer">Baca
+                                    Selengkapnya
+                                    <i class="fas fa-arrow-circle-right"></i></a>
                             </div>
                         </div>
                         <!-- ./col -->
@@ -192,8 +193,7 @@
                                                 </td>
 
                                                 <td>
-
-                                                    <a href="<?php echo base_url('Data_user/detail_data_user') ?>"
+                                                    <a href="<?php echo base_url('Data_user/detail_data_user' . '/' . $d->id_user . '/' . $d->id_usia) ?>"
                                                         class="btn btn-info btn-sm active" role="button"
                                                         aria-pressed="true">Detail</a>
                                                 </td>
