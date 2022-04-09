@@ -11,7 +11,8 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="stylesheet" href="<?php echo base_url ("assets/frontend/style.css")?>" />
     <title>Deteksi Dini Penyimpangan Perkembangan pada Anak</title>
     <style>
     .konsultasi {
@@ -29,10 +30,10 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
-        <div class="container"><a class="navbar-brand text-primary" href="#">Sistem Pakar KPSP</a><button
-                class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span
-                    class="navbar-toggler-icon"></span></button>
+        <div class="container"><a class="navbar-brand text-primary" href=<?php echo base_url("Frontend/index") ?>>Sistem
+                Pakar KPSP</a><button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" aria-current="page"
@@ -53,11 +54,11 @@
     <!-- Panel -->
     <div class="container-fluid" style=" margin-top:80px;">
         <div class="row" style="background-color: #E2F1FF; height:90px;">
-        <div class="container">
-       <h5 style="margin-bottom: -10px; margin-left: 105px; margin-top: 15px;">Perkembangan Anak</h5>
-       <hr style="width: 16%; margin-left: 105px;">       
-       <h6 style="margin-top: -10px; margin-left: 105px; color:steelblue;">Home/Perkembangan Anak</h6>
-        </div>
+            <div class="container">
+                <h5 style="margin-bottom: -10px; margin-left: 105px; margin-top: 15px;">Perkembangan Anak</h5>
+                <hr style="width: 16%; margin-left: 105px;">
+                <h6 style="margin-top: -10px; margin-left: 105px; color:steelblue;">Home/Perkembangan Anak</h6>
+            </div>
         </div>
     </div>
     <!-- Akhir Panel -->
@@ -65,9 +66,9 @@
     <!-- Konsultasi Sekarang -->
     <div class=" container">
         <div class="row konsultasi text-center">
-            <div class="col-6"><img src="<?php echo base_url() ?>assets/frontend/gambar/anak.png" alt="Konsultasi"
+            <div class="col-md-6"><img src="<?php echo base_url() ?>assets/frontend/gambar/anak.png" alt="Konsultasi"
                     class="img-fluid" /></div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <h4>Perkembangan Anak</h4>
                 <p>Perkembangan adalah penambahan struktur dan fungsi tubuh yang lebih
                     kompleks. Perkembangan ialah hasil interaksi antara pematangan susunan saraf
@@ -83,6 +84,12 @@
                 class="text-white fw-bold">IndahQurrothul</a></p>
     </footer>
     <!-- Akhir Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+
 </body>
 
 </html>

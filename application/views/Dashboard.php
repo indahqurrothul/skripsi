@@ -141,7 +141,7 @@
                                             <tr>
                                                 <th>No</th>
                                                 <th>Nama Bayi</th>
-                                                <th>Tanggal Lahir</th>
+                                                <!-- <th>Tanggal Lahir</th> -->
                                                 <th>Usia</th>
                                                 <th>Nama Ibu</th>
                                                 <th>Nama Ayah</th>
@@ -171,9 +171,9 @@
                                                     <p><?php echo $d->nama_bayi; ?> </p>
                                                 </td>
 
-                                                <td>
+                                                <!-- <td>
                                                     <p><?php echo $d->tanggal_lahir; ?> </p>
-                                                </td>
+                                                </td> -->
 
                                                 <td>
                                                     <p><?php echo $d->usia; ?> </p>

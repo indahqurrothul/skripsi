@@ -69,7 +69,7 @@ $this->load->view('template/head'); ?>
                     </div>
                     <?php } ?>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <div class="card card-primary">
                                 <div class="card-header">
                                     <h3 class="card-title">Data Usia</h3>
@@ -96,12 +96,12 @@ $this->load->view('template/head'); ?>
                                                 <td class="text-center"><?php echo $no++?></td>
                                                 <td class="text-center"><?php echo $data_usia->usia ?></td>
                                                 <td class="text-center">
-                                                    <a
-                                                        href="<?= base_url('Data_usia/tampil_edit_data/' . $data_usia->id_usia) ?>"><button
+                                                    <a href="<?= base_url('Data_usia/tampil_edit_data/' . $data_usia->id_usia) ?>"
+                                                        onclick="return confirm('Anda Yakin Ingin Mengubah Data Usia?');"><button
                                                             class="btn btn-info btn-xs" type="button"><i
                                                                 class="far fa-edit"> Edit</i></button></a>
-                                                    <a
-                                                        href="<?= base_url('Data_usia/hapus_data/' . $data_usia->id_usia) ?>"><button
+                                                    <a href="<?= base_url('Data_usia/hapus_data/' . $data_usia->id_usia) ?>"
+                                                        onclick="return confirm('Anda Yakin Menghapus Data Usia?');"><button
                                                             class="btn btn-danger btn-xs" type="button"><i
                                                                 class="far fa-trash-alt"> Hapus</i></button></a>
                                                 </td>

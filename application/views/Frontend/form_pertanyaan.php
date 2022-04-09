@@ -19,7 +19,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
         <div class="container">
-            <a class="navbar-brand text-primary" href="#">Sistem Pakar KPSP</a>
+            <a class="navbar-brand text-primary" href=<?php echo base_url("Frontend/index") ?>>Sistem Pakar KPSP</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -49,11 +49,11 @@
     <!-- Panel -->
     <div class="container-fluid" style=" margin-top:80px;">
         <div class="row" style="background-color: #E2F1FF; height:90px;">
-        <div class="container">
-       <h5 style="margin-bottom: -10px; margin-left: 105px; margin-top: 15px;">Konsultasi</h5>
-       <hr style="width: 17%; margin-left: 105px;">       
-       <h6 style="margin-top: -10px; margin-left: 105px; color:steelblue;">Home/Konsultasi/Data Pertanyaan</h6>
-        </div>
+            <div class="container">
+                <h5 style="margin-bottom: -10px; margin-left: 105px; margin-top: 15px;">Konsultasi</h5>
+                <hr style="width: 17%; margin-left: 105px;">
+                <h6 style="margin-top: -10px; margin-left: 105px; color:steelblue;">Home/Konsultasi/Data Pertanyaan</h6>
+            </div>
         </div>
     </div>
     <!-- Akhir Panel -->
@@ -85,21 +85,22 @@
                                 <td class><input type="radio" name="Tidak[<?php echo $inputjawab?>]" value="0" required>
                                     Ya</label></td>
                                 <td class><input type="radio" name="Tidak[<?php echo $inputjawab?>]" value="1">
-                                    Tidak</label></td>                                
+                                    Tidak</label></td>
                             </tr>
-                                <td class><input type="hidden" name="CFpakar[]" value="<?php echo $data->CFpakar ?>">
-                                    </label></td>
-                                <td class><input type="hidden" name="id_kuesioner[]" value="<?php echo $data->id_kuesioner ?>">
-                                    </label></td>
+                            <td class><input type="hidden" name="CFpakar[]" value="<?php echo $data->CFpakar ?>">
+                                </label></td>
+                            <td class><input type="hidden" name="id_kuesioner[]"
+                                    value="<?php echo $data->id_kuesioner ?>">
+                                </label></td>
                             <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
             </div>
-        <button type="submit" class="btn btn-primary">Hasil Konsultasi</button>
+            <button type="submit" class="btn btn-primary">Hasil Konsultasi</button>
         </form>
-    </div> 
-       
+    </div>
+
     </div>
     <!-- Akhir form Pertanyaam -->
 
@@ -109,6 +110,10 @@
                 class="text-white fw-bold">IndahQurrothul</a></p>
     </footer>
     <!-- Akhir Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

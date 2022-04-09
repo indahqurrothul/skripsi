@@ -29,7 +29,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
         <div class="container">
-            <a class="navbar-brand text-primary" href="#">Sistem Pakar KPSP</a>
+            <a class="navbar-brand text-primary" href=<?php echo base_url("Frontend/index") ?>>Sistem Pakar KPSP</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -166,6 +166,11 @@
         $('#total').text(`Rp ${total}`);
     });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>

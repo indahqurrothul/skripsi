@@ -24,7 +24,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
         <div class="container">
-            <a class="navbar-brand text-primary" href="#">Sistem Pakar KPSP</a>
+            <a class="navbar-brand text-primary" href=<?php echo base_url("Frontend/index") ?>>Sistem Pakar KPSP</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,19 +54,20 @@
     <!-- Panel -->
     <div class="container-fluid" style=" margin-top:80px;">
         <div class="row" style="background-color: #E2F1FF; height:90px;">
-        <div class="container">
-       <h5 style="margin-bottom: -10px; margin-left: 105px; margin-top: 15px;">Konsultasi</h5>
-       <hr style="width: 17%; margin-left: 105px;">       
-       <h6 style="margin-top: -10px; margin-left: 105px; color:steelblue;">Home/Konsultasi/Hasil Perkembangan</h6>
-        </div>
+            <div class="container">
+                <h5 style="margin-bottom: -10px; margin-left: 105px; margin-top: 15px;">Konsultasi</h5>
+                <hr style="width: 17%; margin-left: 105px;">
+                <h6 style="margin-top: -10px; margin-left: 105px; color:steelblue;">Home/Konsultasi/Hasil Perkembangan
+                </h6>
+            </div>
         </div>
     </div>
     <!-- Akhir Panel -->
 
     <!-- Panel -->
     <div class=" container">
-        
-                    <?php 
+
+        <?php 
                     $CFaspek_gerakkasar = $data_gerakkasar[0]->Nilai_gerakkasar * 0.2;
                     $CFaspek_gerakhalus = $data_gerakhalus[0]->Nilai_gerakhalus * 0.2;
                     $CFaspek_bicara_bahasa = $data_bicara_bahasa[0]->Nilai_bicara_bahasa * 0.2;
@@ -89,32 +90,32 @@
 
             <?php 
                 if ($hasil_persentase <= 20  ) { ?>
-                    <div class="alert alert-success mt-5 col-lg-10 text-center mt-3 fw-bold" role="alert">
-                        Perkembangan Anak Sesuai Dengan Tahap Perkembangannya 
-                    </div> 
-                <?php
+            <div class="alert alert-success mt-5 col-lg-10 text-center mt-3 fw-bold" role="alert">
+                Perkembangan Anak Sesuai Dengan Tahap Perkembangannya
+            </div>
+            <?php
                 } elseif ($hasil_persentase >= 21 and $hasil_persentase <= 60 ) { ?>
-                    <div class="alert alert-warning mt-5 col-lg-10 text-center mt-3 fw-bold" role="alert">
-                        Perkembangan Anak Meragukan Dengan Tahap Perkembangannya 
-                    </div> 
-                    <?php
+            <div class="alert alert-warning mt-5 col-lg-10 text-center mt-3 fw-bold" role="alert">
+                Perkembangan Anak Meragukan Dengan Tahap Perkembangannya
+            </div>
+            <?php
                     
                 } elseif ($hasil_persentase >= 61 ) { ?>
-                    <div class="alert alert-danger mt-5 col-lg-10 text-center mt-3 fw-bold" role="alert">
-                        Perkembangan Anak Menyimpang Dengan Tahap Perkembangannya 
-                    </div> 
-                    <?php                    
+            <div class="alert alert-danger mt-5 col-lg-10 text-center mt-3 fw-bold" role="alert">
+                Perkembangan Anak Menyimpang Dengan Tahap Perkembangannya
+            </div>
+            <?php                    
                 }
                 
             ?>
 
-            
+
         </div>
         <div class="row justify-content-center mt-1">
             <div class="col-lg-10">
                 <h5>
-                     Hasil Penyimpangan Perkembangan :  <?php echo $hasil_persentase; ?> %
-                   
+                    Hasil Penyimpangan Perkembangan : <?php echo $hasil_persentase; ?> %
+
                 </h5>
             </div>
         </div>
@@ -124,73 +125,73 @@
 
     <!-- Panel -->
     <div class="container">
-    <?php 
+        <?php 
                 if ($hasil_persentase <= 20  ) { ?>
-                    <div class="row justify-content-center">
-                        <div class="alert alert-success mt-2 col-lg-10 text-center mt-3 fw-bold" role="alert">
-                        Intervensi Dini
-                        </div>
-                    </div> 
-                <?php
+        <div class="row justify-content-center">
+            <div class="alert alert-success mt-2 col-lg-10 text-center mt-3 fw-bold" role="alert">
+                Intervensi Dini
+            </div>
+        </div>
+        <?php
                 } elseif ($hasil_persentase >= 21 and $hasil_persentase <= 60 ) { ?>
-                    <div class="row justify-content-center">
-                        <div class="alert alert-warning mt-2 col-lg-10 text-center mt-3 fw-bold" role="alert">
-                        Intervensi Dini
-                        </div>
-                    </div>
-                    <?php                    
+        <div class="row justify-content-center">
+            <div class="alert alert-warning mt-2 col-lg-10 text-center mt-3 fw-bold" role="alert">
+                Intervensi Dini
+            </div>
+        </div>
+        <?php                    
                 } elseif ($hasil_persentase >= 61 ) { ?>
-                    <div class="row justify-content-center">
-                        <div class="alert alert-danger mt-2 col-lg-10 text-center mt-3 fw-bold" role="alert">
-                        Intervensi Dini
-                        </div>
-                    </div>
-                    <?php                    
+        <div class="row justify-content-center">
+            <div class="alert alert-danger mt-2 col-lg-10 text-center mt-3 fw-bold" role="alert">
+                Intervensi Dini
+            </div>
+        </div>
+        <?php                    
                 }
                 
             ?>
-    
+
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <h5>
-                <?php 
+                    <?php 
                               
                 if ($CFaspek_gerakkasar > 0) {
                     foreach ($stimulasi_gerakkasar as $data_stimulasi_gerakkasar) {
                         ?>
-                        <p align="justify"><?php echo $data_stimulasi_gerakkasar->stimulasi; ?></p>
-                        <?php                    
+                    <p align="justify"><?php echo $data_stimulasi_gerakkasar->stimulasi; ?></p>
+                    <?php                    
                     }
                 }
-                ?>                
-                <?php
+                ?>
+                    <?php
 
                 if ($CFaspek_gerakhalus > 0) {
                     foreach ($stimulasi_gerakhalus as $data_stimulasi_gerakhalus) {
                         ?>
-                        <p align="justify"><?php echo $data_stimulasi_gerakhalus->stimulasi; ?></p>
-                        <?php
+                    <p align="justify"><?php echo $data_stimulasi_gerakhalus->stimulasi; ?></p>
+                    <?php
                     }
                 }
-                ?>               
-                <?php
+                ?>
+                    <?php
 
                 if ($CFaspek_bicara_bahasa > 0) {
                     foreach ($stimulasi_bicara_bahasa as $data_stimulasi_bicara_bahasa) {
                         ?>
-                        <p align="justify"><?php echo $data_stimulasi_bicara_bahasa->stimulasi; ?></p>
-                        <?php
+                    <p align="justify"><?php echo $data_stimulasi_bicara_bahasa->stimulasi; ?></p>
+                    <?php
                         
                     }
                 }
-                ?>               
-                <?php
+                ?>
+                    <?php
 
                 if ($CFaspek_sosialisasi_kemandirian > 0) {
                     foreach ($stimulasi_sosialisasi_kemandirian as $data_stimulasi_sosialisasi_kemandirian) {
                         ?>
-                        <p align="justify"><?php echo $data_stimulasi_sosialisasi_kemandirian->stimulasi; ?></p>
-                        <?php
+                    <p align="justify"><?php echo $data_stimulasi_sosialisasi_kemandirian->stimulasi; ?></p>
+                    <?php
                         
                     }
                 }
@@ -210,6 +211,10 @@
                 class="text-white fw-bold">IndahQurrothul</a></p>
     </footer>
     <!-- Akhir Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>

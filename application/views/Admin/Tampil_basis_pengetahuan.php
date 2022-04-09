@@ -69,7 +69,7 @@ $this->load->view('template/head'); ?>
                     </div>
                     <?php } ?>
                     <div class="row">
-                        <div class="col-8">
+                        <div class="col-md-8">
                             <div class="card card-primary">
                                 <div class="card-header">
                                     <h3 class="card-title">Basis Pengetahuan</h3>
@@ -103,12 +103,12 @@ $this->load->view('template/head'); ?>
                                                 <td class="text-center"><?php echo $row->MD ?></td>
                                                 <td class="text-center"><?php echo $row->CFpakar ?></td>
                                                 <td class="text-center">
-                                                    <a
-                                                        href="<?= base_url('Basis_pengetahuan/tampil_edit_data/' . $row->id_pengetahuan) ?>"><button
+                                                    <a href="<?= base_url('Basis_pengetahuan/tampil_edit_data/' . $row->id_pengetahuan) ?>"
+                                                        onclick="return confirm('Anda Yakin Ingin Mengubah Data Basis Pengetahuan?');"><button
                                                             class="btn btn-info btn-xs" type="button"><i
                                                                 class="far fa-edit"> Edit</i></button></a>
-                                                    <a
-                                                        href="<?= base_url('Basis_pengetahuan/hapus_data/' . $row->id_pengetahuan) ?>"><button
+                                                    <a href="<?= base_url('Basis_pengetahuan/hapus_data/' . $row->id_pengetahuan) ?>"
+                                                        onclick="return confirm('Anda Yakin Ingin Menghapus Data Basis Pengetahuan?');"><button
                                                             class="btn btn-danger btn-xs" type="button"><i
                                                                 class="far fa-trash-alt"> Hapus</i></button></a>
                                                 </td>

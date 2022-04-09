@@ -47,7 +47,7 @@
             <!-- Main content -->
             <section class="content">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12 md-6">
                         <div class="card card-primary">
                             <div class="card-header">
                                 <h3 class="card-title">Data User</h3>
@@ -59,7 +59,7 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Nama Bayi</th>
-                                            <th>Tanggal Lahir</th>
+                                            <!-- <th>Tanggal Lahir</th> -->
                                             <th>Usia</th>
                                             <th>Nama Ibu</th>
                                             <th>Nama Ayah</th>
@@ -77,7 +77,7 @@
                                             <td class="text-center"><?= $no++ ?></td>
                                             <td><?= $a->nama_bayi; ?>
                                             </td>
-                                            <td><?= $a->tanggal_lahir; ?></td>
+                                            <!-- <td><?= $a->tanggal_lahir; ?></td> -->
                                             <td><?= $a->usia; ?></td>
                                             <td><?= $a->nama_ibu; ?></td>
                                             <td><?= $a->nama_ayah; ?></td>
@@ -87,7 +87,6 @@
                                                 <a href="<?php echo base_url('Data_user/detail_data_user' . '/' . $a->id_user . '/' . $a->id_usia) ?>"
                                                     class="btn btn-info btn-sm active" role="button"
                                                     aria-pressed="true">Detail</a>
-
                                             </td>
                                         </tr>
                                         <?php } ?>

@@ -63,7 +63,7 @@
                     </div>
                     <?php } ?>
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-md-12">
                             <div class="card card-primary">
                                 <div class="card-header">
                                     <h3 class="card-title">Data Stimulasi</h3>
@@ -95,12 +95,12 @@
                                                 <td class="text-center"><?php echo $data->aspek_perkembangan ?></td>
                                                 <td class><?php echo $data->stimulasi ?></td>
                                                 <td class="text-center">
-                                                    <a
-                                                        href="<?= base_url('Data_stimulasi/tampil_edit_data/' . $data->id_stimulasi) ?>"><button
+                                                    <a href="<?= base_url('Data_stimulasi/tampil_edit_data/' . $data->id_stimulasi) ?>"
+                                                        onclick="return confirm('Anda Yakin Ingin Mengubah Data Stimulasi?');"><button
                                                             class="btn btn-info btn-xs" type="button"><i
                                                                 class="far fa-edit"> Edit</i></button></a>
-                                                    <a
-                                                        href="<?= base_url('Data_stimulasi/hapus_data/' . $data->id_stimulasi) ?>"><button
+                                                    <a href="<?= base_url('Data_stimulasi/hapus_data/' . $data->id_stimulasi) ?>"
+                                                        onclick="return confirm('Anda Yakin Ingin Menghapus Data Stimulasi?');"><button
                                                             class="btn btn-danger btn-xs" type="button"><i
                                                                 class="far fa-trash-alt"> Hapus</i></button></a>
                                                 </td>

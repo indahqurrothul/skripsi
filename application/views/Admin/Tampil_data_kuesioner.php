@@ -95,12 +95,12 @@
                                                 <td class="text-center"><?php echo $data->aspek_perkembangan ?></td>
                                                 <td class><?php echo $data->pertanyaan ?></td>
                                                 <td class="text-center">
-                                                    <a
-                                                        href="<?= base_url('Data_kuesioner/tampil_edit_data/' . $data->id_kuesioner) ?>"><button
+                                                    <a href="<?= base_url('Data_kuesioner/tampil_edit_data/' . $data->id_kuesioner) ?>"
+                                                        onclick="return confirm('Anda Yakin Ingin Mengubah Data Kuesioner?');"><button
                                                             class="btn btn-info btn-xs" type="button"><i
                                                                 class="far fa-edit"> Edit</i></button></a>
-                                                    <a
-                                                        href="<?= base_url('Data_kuesioner/hapus_data/' . $data->id_kuesioner) ?>"><button
+                                                    <a href="<?= base_url('Data_kuesioner/hapus_data/' . $data->id_kuesioner) ?>"
+                                                        onclick="return confirm('Anda Yakin Ingin Menghapus Data Kuesioner?');"><button
                                                             class="btn btn-danger btn-xs" type="button"><i
                                                                 class="far fa-trash-alt"> Hapus</i></button></a>
                                                 </td>
