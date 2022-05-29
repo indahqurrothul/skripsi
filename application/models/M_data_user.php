@@ -7,8 +7,7 @@ class M_data_user extends CI_Model {
 	{
 		$data = array(
 			'id_user' => $_POST["id_user"],
-			'nama_bayi' => $_POST["nama_bayi"],
-			'tanggal_lahir' => $_POST["tgl_lahir"],
+			'nama_bayi' => $_POST["nama_bayi"],			
 			'id_usia' => $_POST["Usia"],
 			'nama_ibu' => $_POST["nama_ibu"],
 			'nama_ayah' => $_POST["nama_ayah"],

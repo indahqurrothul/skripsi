@@ -67,23 +67,6 @@
     <!-- Panel -->
     <div class=" container">
 
-        <?php 
-                    $CFaspek_gerakkasar = $data_gerakkasar[0]->Nilai_gerakkasar * 0.2;
-                    $CFaspek_gerakhalus = $data_gerakhalus[0]->Nilai_gerakhalus * 0.2;
-                    $CFaspek_bicara_bahasa = $data_bicara_bahasa[0]->Nilai_bicara_bahasa * 0.2;
-                    $CFaspek_sosialisasi_kemandirian = $data_sosialisasi_kemandirian[0]->Nilai_sosialisasi_kemandirian * 0.2;
-
-
-                    //langkah ketiga
-                    $combine_pertama = $CFaspek_gerakkasar + $CFaspek_gerakhalus * (1 - $CFaspek_gerakkasar);
-                    $combine_kedua = $combine_pertama + $CFaspek_bicara_bahasa * (1 - $combine_pertama);
-                    $combine_ketiga = $combine_kedua + $CFaspek_sosialisasi_kemandirian * (1 - $combine_kedua);
-
-
-                    //Langkah keempat
-                    $hasil_persentase = $combine_ketiga * 100;                    
-
-                    ?>
 
         <div class="row justify-content-center">
 
@@ -109,14 +92,41 @@
                 
             ?>
 
-
         </div>
         <div class="row justify-content-center mt-1">
             <div class="col-lg-10">
                 <h5>
                     Hasil Penyimpangan Perkembangan : <?php echo $hasil_persentase; ?> %
-
                 </h5>
+
+                <div class="card-body">
+                    <div class="col-md-6">
+                        <div class="card-header">
+                            <h6 class="card-title">Nilai Gagal Aspek Perkembangan</h6>
+                        </div>
+                        <table class="table table-hover table-striped table-bordered">
+                            <thead>
+                                <th class="text-left">Gerak Kasar</th>
+                                <th class="text-center"><?= $data_gerakkasar[0]->Nilai_gerakkasar; ?></th>
+                            </thead>
+                            <thead>
+                                <th class="text-left">Gerak Halus</th>
+                                <th class="text-center"><?= $data_gerakhalus[0]->Nilai_gerakhalus; ?></th>
+                            </thead>
+                            <thead>
+                                <th class="text-left">Bicara dan Bahasa</th>
+                                <th class="text-center"><?= $data_bicara_bahasa[0]->Nilai_bicara_bahasa; ?></th>
+                            </thead>
+                            <thead>
+                                <th class="text-left">Sosialisasi dan Kemandirian</th>
+                                <th class="text-center">
+                                    <?= $data_sosialisasi_kemandirian[0]->Nilai_sosialisasi_kemandirian; ?></th>
+                            </thead>
+
+                        </table>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -140,7 +140,7 @@ class M_data_kuesioner extends CI_Model {
 		return $this->db->delete("tbl_data_kuesioner", array("id_kuesioner" => $id_kuesioner));
 	}
 
-    //pengelompokan sesuai aspek data nilai CF aspek gerak kasar
+    // data nilai CF pakar aspek gerak kasar
     public function get_data_gerakkasar($id_user)
     {
         $this->db->select(['SUM(tbl_data_konsultasi.Nilai_CFuser) AS Nilai_gerakkasar']);
@@ -231,6 +231,49 @@ class M_data_kuesioner extends CI_Model {
         $return = $this->db->get('');
         return $return->result();
     }
+
+    //Pneglahan Data
+    public function pengolahan_data($id_user, $id_usia)
+    {
+         $data_gerakkasar = $this->get_data_gerakkasar($id_user);
+         $data_gerakhalus = $this->get_data_gerakhalus($id_user);
+         $data_bicara_bahasa = $this->get_data_bicara_bahasa($id_user);
+         $data_sosialisasi_kemandirian = $this->get_data_sosialisasi_kemandirian($id_user);
+         $stimulasi_gerakkasar = $this->get_data_stimulasi_gerakkasar($id_usia);
+         $stimulasi_gerakhalus = $this->get_data_stimulasi_gerakhalus($id_usia);
+         $stimulasi_bicara_bahasa =  $this->get_data_stimulasi_bicara_bahasa($id_usia); 
+         $stimulasi_sosialisasi_kemandirian =  $this->get_data_stimulasi_sosialisasi_kemandirian($id_usia); 
+
+         # Langkah Ke 2
+         $CFaspek_gerakkasar = $data_gerakkasar[0]->Nilai_gerakkasar * 0.2;
+         $CFaspek_gerakhalus = $data_gerakhalus[0]->Nilai_gerakhalus * 0.2;
+         $CFaspek_bicara_bahasa = $data_bicara_bahasa[0]->Nilai_bicara_bahasa * 0.2;
+         $CFaspek_sosialisasi_kemandirian = $data_sosialisasi_kemandirian[0]->Nilai_sosialisasi_kemandirian * 0.2;
+
+         # Langkah Ke 3
+         $combine_pertama = $CFaspek_gerakkasar + $CFaspek_gerakhalus * (1 - $CFaspek_gerakkasar);
+         $combine_kedua = $combine_pertama + $CFaspek_bicara_bahasa * (1 - $combine_pertama);
+         $combine_ketiga = $combine_kedua + $CFaspek_sosialisasi_kemandirian * (1 - $combine_kedua);
+
+         # Langkah Ke 4
+         $hasil_persentase = $combine_ketiga * 100;
+ 
+         return array(
+                'data_gerakkasar'=>$data_gerakkasar,
+                'data_gerakhalus'=>$data_gerakhalus,
+                'data_bicara_bahasa'=>$data_bicara_bahasa,
+                'data_sosialisasi_kemandirian'=>$data_sosialisasi_kemandirian,
+                'CFaspek_gerakkasar'=>$CFaspek_gerakkasar,
+                'CFaspek_gerakhalus'=>$CFaspek_gerakhalus,
+                'combine_pertama'=>$combine_pertama,
+                'combine_kedua'=>$combine_kedua,
+                'combine_ketiga'=>$combine_ketiga,
+                'hasil_persentase'=>$hasil_persentase,
+                'CFaspek_bicara_bahasa'=>$CFaspek_bicara_bahasa,
+                'CFaspek_sosialisasi_kemandirian'=>$CFaspek_sosialisasi_kemandirian
+            );
+    }
+
 
 }
 ?>

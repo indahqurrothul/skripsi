@@ -91,23 +91,6 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="mb-3">
-                        <label for="exampleFormControlInput3" class="form-label">Tanggal Lahir</label>
-                        <input type="date" name="tgl_lahir" class="form-control" id=""
-                            placeholder="Masukkan Tanggal Lahir" required
-                            oninvalid="this.setCustomValidity('Tanggal Lahir Tidak Boleh Kosong')"
-                            oninput="setCustomValidity('')" />
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput4" class="form-label">Nama Ayah</label>
-                        <input type="text" name="nama_ayah" class="form-control" id="" placeholder="Masukkan Nama Ayah"
-                            required oninvalid="this.setCustomValidity('Nama Ayah Tidak Boleh Kosong')"
-                            oninput="setCustomValidity('')" />
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="mb-3">
                         <label for="exampleFormControlInput5" class="form-label">Pilih Usia Bayi</label>
                         <select name="Usia" id="Usia" class="form-control" required>
                             <option value="">-- Pilih Usia --</option>
@@ -116,6 +99,14 @@
                             <option value="<?php echo $data->id_usia ?>"> <?php echo $data->usia ?></option>
                             <?php } ?>
                         </select>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput4" class="form-label">Nama Ayah</label>
+                        <input type="text" name="nama_ayah" class="form-control" id="" placeholder="Masukkan Nama Ayah"
+                            required oninvalid="this.setCustomValidity('Nama Ayah Tidak Boleh Kosong')"
+                            oninput="setCustomValidity('')" />
                     </div>
                 </div>
                 <div class="col-lg-6">
